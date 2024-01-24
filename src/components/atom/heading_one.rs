@@ -7,12 +7,12 @@ pub struct Props{
     pub children:Html,
     #[prop_or_default()]
     pub center:bool,
-    pub level:BBheaderLevel
+    pub level:AAheaderLevel
 }
 
 
 #[derive(PartialEq)]
-pub enum BBheaderLevel {
+pub enum AAheaderLevel {
     One,
     Two,
 }
@@ -20,21 +20,20 @@ pub enum BBheaderLevel {
 
 
 #[styled_component]
-pub fn BBheading(props:&Props) -> Html{
+pub fn AAheading(props:&Props) -> Html{
 
     let mut styles:Vec<Style> = vec![];
     if props.center{
         styles.push(
             style!{
                 text-align: center;
-                color: red;
 
             }.unwrap()
 
             )
     };
         html!{
-            if props.level == BBheaderLevel::One {
+            if props.level == AAheaderLevel::One {
                 <h1 class={classes!(styles)}> {props.children.clone()} </h1>
             }else {
                 <h2 class={classes!(styles)}> {props.children.clone()} </h2>

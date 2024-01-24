@@ -1,5 +1,6 @@
 use stylist::yew::styled_component;
 use yew::{function_component, html, Html, Properties};
+use crate::components::atom::checkbox::AACheckbox;
 
 #[derive(Clone, PartialEq)]
 struct TodoItems{
@@ -35,7 +36,9 @@ pub fn ListItems() -> Html{
 
 
     html!{
-        <Creatinglist todoitems={items}/>
+        <>
+        <Creatinglist todoitems={items}/> 
+        </>
 
     }
 }
@@ -44,7 +47,9 @@ pub fn ListItems() -> Html{
 fn creatinglist(ListProps { todoitems }: &ListProps) -> Html{
 
     todoitems.iter().map(|list| html!{
-        <p key={list.id}> {format!("{}", list.title)}</p>
-    }).collect()
+        <p key={list.id}><AACheckbox> {format!("{}", list.title)}</AACheckbox>
+            
+ </p>
+            }).collect()
     
 }
