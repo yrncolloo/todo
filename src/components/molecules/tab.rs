@@ -1,10 +1,15 @@
 use stylist::{style, yew::styled_component};
-use yew::{html, Html};
+use yew::{html, Html, Properties};
 
-use crate::components::atom::listing::ListItems;
+use crate::components::atom::{listing::ListItems, heading_one::{BBheading, BBheaderLevel}};
+
+#[derive(Properties, PartialEq)]
+pub struct Props {
+    pub children:Html
+}  
 
 #[styled_component(MMTab)]
-pub fn tab() -> Html{
+pub fn tab(props:&Props) -> Html{
 
     let stylesheet = style!{
         background-color: blue;
@@ -21,7 +26,8 @@ pub fn tab() -> Html{
 
     html!{
         <div class={stylesheet}>
-        <ListItems/>
+            <BBheading level={BBheaderLevel::Two}> {props.children.clone()}</BBheading>
+            <ListItems/>
         </div>
 
     }
