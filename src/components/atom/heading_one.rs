@@ -1,10 +1,20 @@
-use stylist::{style, yew::styled_component};
+use stylist::{style, yew::styled_component, Style};
 use yew::prelude::*;
+
 
 #[derive(Properties, PartialEq)]
 pub struct Props{
-    pub children:String
+    pub children:Html,
+    #[prop_or_default()]
+    pub center:bool,
+    pub level:BBheaderLevel
+}
 
+
+#[derive(PartialEq)]
+pub enum BBheaderLevel {
+    One,
+    Two,
 }
 
 
@@ -12,14 +22,23 @@ pub struct Props{
 #[styled_component]
 pub fn BBheading(props:&Props) -> Html{
 
-    let center = style!{
-        text-align: center;
-        color: red;
-    }.unwrap();
+    let mut styles:Vec<Style> = vec![];
+    if props.center{
+        styles.push(
+            style!{
+                text-align: center;
+                color: red;
 
+            }.unwrap()
 
-    html!{
-            <h1 class={center}> {props.children.clone()} </h1>
+            )
+    };
+        html!{
+            if props.level == BBheaderLevel::One {
+                <h1 class={classes!(styles)}> {props.children.clone()} </h1>
+            }else {
+                <h2 class={classes!(styles)}> {props.children.clone()} </h2>
+            }
+        }
 
-    }
 }
