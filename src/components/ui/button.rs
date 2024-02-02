@@ -1,7 +1,5 @@
-use std::fmt::format;
-
 use stylist::{style};
-use yew::{function_component, html, AttrValue, Html, Properties};
+use yew::{function_component, html, Html, Properties};
 #[derive(Properties, PartialEq)]
 pub struct Props{
     pub children:Html,
