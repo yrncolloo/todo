@@ -16,7 +16,7 @@ pub fn Tags() -> Html{
         width:auto;
     }.unwrap();
 
-    let tag:Vec<&str> = vec!["#Personal", "#Work", "#tag1", "#tag2", "#tag3", "#tag4"];
+    let tag:Vec<&str> = vec!["#Personal", "#Work", "#tag1", "#tag2", "#tag3", "#tag"];
 
 
     html!{
@@ -36,4 +36,3 @@ fn list_to_html(list: Vec<&str>) -> Vec<Html> {
         <But>{item}</But>
     }).collect()
 }
-
