@@ -1,7 +1,7 @@
 use stylist::{style, yew::styled_component};
 use yew::{html, Html};
 
-use crate::components::ui::{title::Titles, title::TitleLevel, search::Search};
+use crate::components::ui::{title::Titles, title::TitleLevel, search::Search, search::Icons};
 use crate::components::ui::{center_box::Box};
 
 #[styled_component]
@@ -21,7 +21,7 @@ pub fn Centerpart() -> Html{
     html!{
         <div class={style}>
             <Titles level={TitleLevel::One}>{"Today"}</Titles>
-            <Search placeholder={"Add new task"}/>
+            <Search icon={Icons::Add} placeholder={"Add new task"}/>
             <Box/>
 
         </div>
