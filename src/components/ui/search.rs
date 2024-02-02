@@ -1,8 +1,13 @@
 use stylist::{style, yew::styled_component};
-use yew::{html, Html};
+use yew::{html, Html, Properties};
+
+#[derive(Properties, PartialEq)]
+pub struct Props{
+    pub placeholder:String,
+}
 
 #[styled_component]
-pub fn Search() -> Html {
+pub fn Search(props:&Props) -> Html {
     
     let style = style!{
 
@@ -13,12 +18,13 @@ pub fn Search() -> Html {
                     padding: 10px;
                     background-color: #EFECEC;
                     }
+                    background: url("/home/yrncollo/Pictures/wallpaper1.jpg");
     }.unwrap();
     
     html!{
 
         <div class={style}>
-            <input type="text" placeholder="Search.."/>
+            <input type="text" placeholder={props.placeholder.clone()}/>
         </div>
     }
 }
