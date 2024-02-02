@@ -1,6 +1,6 @@
 use stylist::{style, yew::styled_component};
 use yew::{html, Html};
-use crate::components::ui::{title::Titles, title::TitleLevel};
+use crate::components::ui::{title::Titles, title::TitleLevel, search::Icons};
 use crate::components::ui::{search::Search, tasks::Tasks, tags::Tags, button::But};
 
 #[styled_component(Sidebar)]
@@ -28,7 +28,7 @@ pub fn sidebar() -> Html{
     html!{
         <div class={style}>
             <Titles level={TitleLevel::Two}>{"Menu"}</Titles>
-            <Search placeholder={"Search"}/>
+            <Search icon={Icons::Search}placeholder={"Search"}/>
             <Tasks title={"TASKS"}>{tasks}</Tasks>
             <Tasks title={"LIST"}>{list}</Tasks>
             <But>{"Add List"}</But>
