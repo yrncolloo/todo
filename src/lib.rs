@@ -1,6 +1,6 @@
 use stylist::{style, yew::styled_component};
 use yew::prelude::*;
-use components::{sidebar::Sidebar, center_part::Centerpart};
+use components::{sidebar::Sidebar, center_part::Centerpart, left_part::Leftpart};
 
 pub mod components;
 
@@ -19,6 +19,7 @@ pub fn app() -> Html{
         <div class={style}>
             <Sidebar/>
             <Centerpart/>
+            <Leftpart/>
 
         </div>
 
