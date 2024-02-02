@@ -28,7 +28,7 @@ pub fn sidebar() -> Html{
     html!{
         <div class={style}>
             <Titles level={TitleLevel::Two}>{"Menu"}</Titles>
-            <Search/>
+            <Search placeholder={"Search"}/>
             <Tasks title={"TASKS"}>{tasks}</Tasks>
             <Tasks title={"LIST"}>{list}</Tasks>
             <But>{"Add List"}</But>
