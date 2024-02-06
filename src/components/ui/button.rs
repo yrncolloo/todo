@@ -39,7 +39,6 @@ pub fn But(props:&Props) -> Html{
         position:relative;
 
     }.unwrap();
-    let img:Vec<String> = vec!["Upcoming".to_string()];
 
     html!{
 
