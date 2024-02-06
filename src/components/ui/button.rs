@@ -1,10 +1,15 @@
 use stylist::{style};
 use yew::{function_component, html, Html, Properties};
+use crate::components::ui::icons::Icons;
+
+
 #[derive(Properties, PartialEq)]
 pub struct Props{
     pub children:Html,
     #[prop_or_default()] // I Dont know how to implement this yet
     pub backgroundcolor:String,
+    #[prop_or_default()]
+    pub icon:Option<Html>
 }
 
 #[function_component]
@@ -29,6 +34,7 @@ pub fn But(props:&Props) -> Html{
             color:black;
             cursor:pointer;
         }
+        position:relative;
 
     }.unwrap();
     
@@ -36,6 +42,7 @@ pub fn But(props:&Props) -> Html{
 
         <div class={style}>
         <button class={"button"}>{props.children.clone()}</button>
+        {props.icon.clone()}
         </div>
     }
 }
