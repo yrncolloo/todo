@@ -41,6 +41,13 @@ pub fn Search(props:&Props) -> Html {
                 transform: translateY(-50%);
                 pointer-events: none; /* Prevent the icon from blocking clicks on the input */
         }
+        .fa-plus {
+                position: absolute;
+                top: 50%;
+                right: 10px; /* Adjust the position of the icon */
+                transform: translateY(-50%);
+                pointer-events: none; /* Prevent the icon from blocking clicks on the input */
+        }
     }.unwrap();
     
     html!{
