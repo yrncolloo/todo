@@ -5,3 +5,4 @@ pub mod tasks;
 pub mod tags;
 pub mod center_box;
 pub mod description;
+pub mod icons;
