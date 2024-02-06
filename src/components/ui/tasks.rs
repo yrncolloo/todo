@@ -22,15 +22,15 @@ pub fn Tasks(props:&Props) -> Html{
 
     let icon_to_render = match props.icon {
         Image::Task => vec![
-            "../../images/angles-right-solid.svg".to_string(),
-            "../../images/bars-solid.svg".to_string(),
-            "../../images/calendar-days-solid.svg".to_string(),
-            "../../images/book-solid.svg".to_string(),
+            "images/angles-right-solid.svg".to_string(),
+            "images/bars-solid.svg".to_string(),
+            "images/calendar-days-solid.svg".to_string(),
+            "images/book-solid.svg".to_string(),
         ],
         Image::List => vec![
-            "../../images/square-solid-red.svg".to_string(),
-            "../../images/square-solid-blue.svg".to_string(),
-            "../../images/square-solid-yellow.svg".to_string(),
+            "images/square-solid-red.svg".to_string(),
+            "images/square-solid-blue.svg".to_string(),
+            "images/square-solid-yellow.svg".to_string(),
         ]
 
     };
