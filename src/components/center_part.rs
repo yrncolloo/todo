@@ -10,11 +10,11 @@ pub fn Centerpart() -> Html{
     let style = style!{
 
         float:left;
-        width:45%;
-        height:86%;
-        padding:20px;
+        width:42vw;
+        height:81vh;
+        padding:1%;
         border-radius:25px;
-        margin:2%;
+        margin:1%;
         margin-left:0px;
         margin-right:0px;
     }.unwrap();

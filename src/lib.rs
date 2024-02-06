@@ -10,8 +10,8 @@ pub fn app() -> Html{
     let style = style!{
         border:0.1px solid #F4F4F4;
         background-color:#F4F4F4;
-        height:600px;
-        margin:20px;
+        height:100%;
+        margin:0.5%;
         border-radius:25px;
     }.unwrap();
 

@@ -9,7 +9,9 @@ pub struct Props{
     #[prop_or_default()] // I Dont know how to implement this yet
     pub backgroundcolor:String,
     #[prop_or_default()]
-    pub icon:Option<Html>
+    pub icon:Option<Html>,
+    #[prop_or_default()]
+    pub icon_image:Vec<String>
 }
 
 #[function_component]
@@ -37,11 +39,13 @@ pub fn But(props:&Props) -> Html{
         position:relative;
 
     }.unwrap();
-    
+    let img:Vec<String> = vec!["Upcoming".to_string()];
+
     html!{
 
         <div class={style}>
         <button class={"button"}>{props.children.clone()}</button>
+        <Icons > {props.icon_image.clone()}</Icons>
         {props.icon.clone()}
         </div>
     }

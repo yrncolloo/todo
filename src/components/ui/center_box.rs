@@ -5,12 +5,12 @@ use yew::{html, Html};
 pub fn Box() -> Html{
     let lists = vec!["Research content Idea", "Create database for guest authors", "Task 3"];
     let style = style!{
-        padding: 10px;
+        padding: 1rem;
         font-size: 19px;
         font-weight: medium;
 
                 .checkbox{
-                    margin-right: 10px;
+                    margin-right: 1rem;
                 }
 
     }.unwrap();

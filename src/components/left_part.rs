@@ -11,9 +11,9 @@ pub fn Leftpart() -> Html{
     let style = style!{
 
         float:left;
-        height:86%;
-        width:20%;
-        margin:2%;
+        height:81vh;
+        width:22vw;
+        margin:1%;
         margin-left:0px;
         margin-right:0px;
         padding:20px;
